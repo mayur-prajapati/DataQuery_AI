@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import google.generativeai as genai
-from dotenv import load_dotenv
 import io
 import os
 from io import BytesIO
@@ -15,7 +14,6 @@ os.environ['GRPC_TRACE'] = ''
 
 # 🧠 Gemini API Key
 
-load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
@@ -310,3 +308,4 @@ if uploaded_file:
 
 else:
     st.info("👆 Please upload a CSV, Excel, or TXT file to start.")
+
